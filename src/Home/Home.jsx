@@ -1,6 +1,7 @@
 import "./Home.css";
 import { useEffect, useState } from "react";
 import movies from "../database.jsx";
+import Starrating from "../components/Starrating/Starrating.jsx";
 
 // {
 //     title: "Dead Poets Society",
@@ -22,9 +23,7 @@ const Home = () => {
     setMovieData(
       movies
         .filter((movie) =>
-          movie.title
-            .toLocaleLowerCase()
-            .includes(titleInput.toLocaleLowerCase())
+          movie.title.toLowerCase().includes(titleInput.toLowerCase())
         )
         .toSorted((a, b) => {
           if (sort === 1) {
@@ -76,7 +75,7 @@ const Home = () => {
             <p>{singleMovie.director}</p>
             <p>{singleMovie.duration}</p>
             <p>{singleMovie.rate}</p>
-
+            <Starrating rate={singleMovie.rate} />
             {/* Alternative <p>{movie.genre.join(", ")}</p>*/}
             <div className="wrapper-genre">
               {singleMovie.genre.map((genre, index) => (
