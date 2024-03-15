@@ -1,0 +1,74 @@
+.whole-page {
+  background: no-repeat left url(../img/movietheatre.jpg);
+  background-size: 100% auto;
+  background-attachment: fixed;
+  padding: 2vw;
+}
+/* --- header */
+header {
+  position: fixed;
+  margin-top: 2vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+h1 {
+  margin: 0 auto;
+  color: white;
+  text-align: center;
+  padding: 2vw 3vw;
+  border: 10px double white;
+  border-radius: 15px;
+  background-color: rgba(0, 0, 0, 0.551);
+  width: 30vw;
+  font-size: 3rem;
+}
+.sort-buttons {
+  margin-top: 4vw;
+  margin-bottom: 4vw;
+}
+.sort-buttons button,
+.sort-buttons input {
+  margin-left: 2vw;
+  background-color: rgba(0, 0, 0, 0.551);
+  color: white;
+  font-size: 1.5rem;
+  padding: 5px 10px;
+  border-radius: 15px;
+}
+/* --- main */
+.movie-page {
+  margin-top: 35vh;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2vw;
+  overflow-y: scroll;
+  height: 65vh;
+}
+/* --- tile */
+.movie-page article {
+  background-color: rgba(0, 0, 0, 0.551);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 15px;
+  padding: 1vw;
+}
+.title {
+  margin-bottom: 2vw;
+  font-size: 1rem;
+  font-weight: 700;
+  font-size: 1.2rem;
+  text-align: center;
+}
+.movie-page article p {
+  margin-top: -3px;
+}
+.wrapper-genre p {
+  color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+}
